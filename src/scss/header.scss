@@ -1,16 +1,69 @@
 //====================================================================================================
+.header {
+	&__top {
+		background-color: $mainColorDark;
+		color: #fff;
+	}
+}
+
+.top-header {
+	padding: 10px 0;
+	&__container {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		min-height: 50px;
+		
+	}
+	&__menu {
+		flex: 1 1 auto;
+	}
+	
+	&__user {
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		line-height: math.div(22,18);
+		&::before {
+			font-size: rem(28);
+			margin-right: em(15, 28);
+		}
+	}
+}
+
+.menu {
+	&__body {
+	}
+	
+	&__list {
+		display: flex;
+		gap: 60px;
+		flex-wrap: wrap;
+		row-gap: 5px;
+		@include adaptiveValue('column-gap', 60, 20);
+	}
+	
+	&__item {
+	}
+	
+	&__link {
+		font-size: rem(16);
+		line-height: math.div(20, 16);
+	}
+}
+
+.icon-menu {
+}
 
 //====================================================================================================
-
-//Burger
-/*
+// Burger
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
-		width: rem(30);
-		height: rem(18);
+		flex: 0 0 30px;
+		height: 18px;
 		cursor: pointer;
 		z-index: 5;
 		span,
@@ -21,8 +74,8 @@
 			right: 0;
 			position: absolute;
 			width: 100%;
-			height: rem(2);
-			background-color: #000;
+			height: 2px;
+			background-color: #ffffff;
 		}
 		&::before {
 			top: 0;
@@ -31,7 +84,7 @@
 			bottom: 0;
 		}
 		span {
-			top: calc(50% - rem(1));
+			top: calc(50% - 1px);
 		}
 		.menu-open & {
 			span {
@@ -41,14 +94,13 @@
 			&::after {
 			}
 			&::before {
-				top: calc(50% - rem(1));
+				top: calc(50% - 1px);
 				transform: rotate(-45deg);
 			}
 			&::after {
-				bottom: calc(50% - rem(1));
+				bottom: calc(50% - 1px);
 				transform: rotate(45deg);
 			}
 		}
 	}
 }
-*/
