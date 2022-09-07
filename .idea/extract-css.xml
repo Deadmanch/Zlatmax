@@ -3,5 +3,6 @@
   <component name="ExtractCSSSettings">
     <option name="bem" value="true" />
     <option name="language" value="SCSS" />
+    <option name="target" value="CLIPBOARD" />
   </component>
 </project>
