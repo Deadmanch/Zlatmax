@@ -4,6 +4,7 @@
 		background-color: $mainColorDark;
 		color: #fff;
 	}
+	
 	&__body {
 	
 	}
@@ -11,6 +12,7 @@
 
 .top-header {
 	padding: rem(10) 0;
+	
 	&__container {
 		display: flex;
 		align-items: center;
@@ -18,6 +20,7 @@
 		min-height: rem(50);
 		
 	}
+	
 	&__menu {
 		flex: 1 1 auto;
 	}
@@ -26,7 +29,8 @@
 		display: flex;
 		align-items: center;
 		font-weight: 600;
-		line-height: math.div(22,18);
+		line-height: math.div(22, 18);
+		
 		&::before {
 			font-size: rem(28);
 			margin-right: em(15, 28);
@@ -58,22 +62,26 @@
 .body-header {
 	padding: rem(10) 0;
 	background-color: #ECF1F2;
+	
 	&__container {
 		display: flex;
 		min-height: rem(70);
 		align-items: center;
 	}
+	
 	&__logo {
-	@extend %ic;
+		@extend %ic;
 		@extend ._icon-logo;
 		font-size: rem(42);
-		color:$mainColorDark;
+		color: $mainColorDark;
 	}
+	
 	&__search {
 		padding-right: rem(20);
 		flex: 1 1 auto;
-	@include adaptiveValue('padding-left', 158, 20);
+		@include adaptiveValue('padding-left', 158, 20);
 	}
+	
 	&__actions {
 	
 	}
@@ -81,13 +89,14 @@
 
 .search-header {
 	max-width: rem(377);
-	background-color: rgba(7,7,7, 0.03);
+	background-color: rgba(7, 7, 7, 0.03);
 	border-radius: rem(3);
-	border: 1px solid rgba(4,4,4,0.5);
+	border: 1px solid rgba(4, 4, 4, 0.5);
 	position: relative;
+	
 	&__button {
 		background-color: transparent;
-	  position: absolute;
+		position: absolute;
 		top: 0;
 		left: rem(8);
 		height: rem(41);
@@ -96,17 +105,19 @@
 		justify-content: center;
 		align-items: center;
 		font-size: rem(14);
-		color: rgba(0,0,0,0.5);
+		color: rgba(0, 0, 0, 0.5);
 	}
+	
 	&__input {
 		width: 100%;
 		height: rem(41);
 		border-radius: rem(3);
 		background-color: transparent;
-		color:$mainColor;
+		color: $mainColor;
 		padding: 0px rem(20) 0px rem(50);
+		
 		&::placeholder {
-			color: rgba(0,0,0,0.5);
+			color: rgba(0, 0, 0, 0.5);
 		}
 	}
 }
@@ -116,11 +127,13 @@
 	display: flex;
 	align-items: center;
 	column-gap: rem(30);
+	
 	&__location {
 		display: inline-flex;
 		align-items: center;
 		font-weight: 600;
 		margin: 0 rem(25) 0 0;
+		
 		&::before {
 			font-size: rem(24);
 			margin: 0 em(10, 24) 0 0;
@@ -131,11 +144,13 @@
 	}
 	
 	&__favorite {
+		font-size: rem(27);
 	}
 	
 	&__cart {
 	}
 }
+
 .phones-header {
 	&__items {
 	}
@@ -145,14 +160,16 @@
 		display: flex;
 		
 	}
+	
 	&__phone {
 		font-weight: 600;
 		line-height: math.div(22, 18);
 		white-space: nowrap;
 	}
+	
 	&__list {
-	position: absolute;
-		top:100%;
+		position: absolute;
+		top: 100%;
 		width: 100%;
 		left: rem(-10);
 		background-color: #fff;
@@ -160,44 +177,82 @@
 		border-radius: rem(10);
 		margin: rem(5) 0 0 0;
 		box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.2);
+		
 		li {
 			&:not(:last-child) {
-				margin-bottom: em(8,18);
+				margin-bottom: em(8, 18);
 			}
 		}
 	}
+	
 	&__arrow {
 		color: $mainColorOrange;
 		font-size: rem(10);
-		margin: 0 0 0 em(17,16);
+		margin: 0 0 0 em(17, 16);
 		transition: transform 0.3s ease 0s;
+		
 		&._spoller-active {
 			transform: rotate(-180deg);
 		}
 	}
 	
 	&__callback {
+		font-weight: 700;
+		line-height: math.div(22, 18);
+		color: $mainColorOrange;
+		margin: rem(3) 0 0 0;
 	}
 }
 
 
 .cart-header {
+	display: flex;
+	column-gap: 15px;
+	align-items: center;
+	position: relative;
+	z-index: 5;
 	&__icon {
+		flex: 0 0 rem(37);
+		position: relative;
+		
 		&::before {
 			content: url("../img/icons/cart.svg");
-			width: rem(37);
-			height: rem(37);
+			width: rem(35);
+			height: rem(35);
 		}
 		
+		span {
+			position: absolute;
+			width: rem(14);
+			height: rem(14);
+			background-color: $mainColorOrange;
+			font-size: rem(7);
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			top: 0;
+			right: 0;
+			color: #ffffff;
+		}
 	}
 	
 	&__body {
+		line-height: math.div(20, 16);
+		font-size: rem(16);
+		flex: 0 0 auto;
 	}
 	
 	&__sum {
+		font-weight: 500;
+		
+		&:not(:last-child) {
+			margin-bottom: em(5, 16);
+		}
 	}
 	
 	&__link {
+		color: $mainColorOrange;
 	}
 }
 
@@ -237,13 +292,16 @@
 			span {
 				width: 0;
 			}
+			
 			&::before,
 			&::after {
 			}
+			
 			&::before {
 				top: calc(50% - 1px);
 				transform: rotate(-45deg);
 			}
+			
 			&::after {
 				bottom: calc(50% - 1px);
 				transform: rotate(45deg);
