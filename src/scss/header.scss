@@ -33,10 +33,16 @@
 		align-items: center;
 		font-weight: 600;
 		line-height: math.div(22, 18);
-		
 		&::before {
 			font-size: rem(28);
 			margin-right: em(15, 28);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					color: $mainColorOrange;
+				}
+			}
 		}
 	}
 }
@@ -59,6 +65,11 @@
 	&__link {
 		font-size: rem(16);
 		line-height: math.div(20, 16);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColorOrange;
+			}
+		}
 	}
 }
 
@@ -137,9 +148,17 @@
 		font-weight: 600;
 		margin: 0 rem(25) 0 0;
 		
+		
 		&::before {
 			font-size: rem(24);
 			margin: 0 em(10, 24) 0 0;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				span {
+					color: $mainColorOrange;
+				}
+			}
 		}
 	}
 	
@@ -168,6 +187,11 @@
 		font-weight: 600;
 		line-height: math.div(22, 18);
 		white-space: nowrap;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColorOrangeHover;
+			}
+		}
 	}
 	
 	&__list {
@@ -204,6 +228,11 @@
 		line-height: math.div(22, 18);
 		color: $mainColorOrange;
 		margin: rem(3) 0 0 0;
+		@media (any-hover: hover) {
+			&:hover {
+					color: $mainColorOrangeHover;
+			}
+		}
 	}
 }
 
@@ -256,6 +285,11 @@
 	
 	&__link {
 		color: $mainColorOrange;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColorOrangeHover;
+			}
+		}
 	}
 }
 
@@ -317,6 +351,7 @@
 //========================================
 
 .catalog-header {
+	position: relative;
 	background-color: $mainColorDark;
 	color: #fff;
 	&__container {
@@ -343,6 +378,11 @@
 		align-items: center;
 		text-align: center;
 		position: relative;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColorOrange;
+			}
+		}
 		&::after {
 			content: "";
 			opacity: 0;
@@ -360,28 +400,58 @@
 		width: 100%;
 		left: 0;
 		top: 100%;
+		background-color: $mainColorDark;
 	}
 }
 
 .sub-menu-catalog {
+	padding-bottom: rem(30);
 	&__block {
+		padding: 0 rem(10);
+		display: flex;
+		justify-content: space-between;
 	}
 	
 	&__column {
+		flex: 1 1 auto;
+		display: grid;
+		gap: 30px;
 	}
 	
 	&__category {
+		font-size: rem(16);
+		font-weight: 700;
+		line-height: math.div(16,20);
+		padding: rem(30) 0;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColorOrange;
+			}
+		}
+
 	}
 	
 	&__list {
+		display: grid;
+		gap: 20px;
 	}
 	
 	&__item {
 	}
 	
 	&__link {
+		font-size: rem(16);
+		line-height: math.div(20,16);
+		@media (any-hover: hover) {
+			&:hover {
+				color: $mainColorOrange;
+			}
+		}
 	}
 	
 	&__all {
+		font-size: rem(16);
+		color: $mainColorOrange;
 	}
 }
